@@ -164,20 +164,19 @@ color: #202842;
 color: #202842;
 }
 
-.card{
+.card1{
   height: 500px;
   width: 320px;
-  border-radius: 15px;
+  border-radius: 35px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px,
   rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
   rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
   font-size: 16px;
 }
-.card div {
+.card1 div {
   margin-left: 4%;
   margin-right:6%;
-  margin-top: 20px;
-
+  margin-top: 40px;
 }
 .price{
   font-size: 45px;
@@ -215,4 +214,152 @@ color: #202842;
 #whiteButton{
   background-color:#202842;
   color:white;
+}
+
+
+
+
+#items{
+  margin-top: 130px;
+}
+
+.con-cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-left: 2%;
+}
+.con-cards:after {
+    content: '';
+    position: relative;
+    min-width: 50px;
+    height: 10px;
+    background: transparent;
+}
+.con-cards::-webkit-scrollbar {
+    height: 0px;
+}
+.card {
+    box-shadow: 0px 10px 30px 0px rgba(0,0,0,.05);
+    padding: 15px;
+    border-radius: 35px;
+    width: 260px;
+    min-width: 260px;
+    position: relative;
+    margin: 0px 15px;
+    background: #fff;
+    scroll-snap-align: center;
+    transition: all .25s ease;
+    border: 2px solid #fff;
+}
+.add-active {
+    /* transform: translate(0, -10px); */
+    box-shadow: 0px 10px 30px 0px rgba(254, 160, 26, .2);
+    border: 2px solid #fea01a;
+}
+.add-active .add {
+    display: none;
+}
+.add-active .con-image img:not(.bg) {
+    transform: scale(1.15);
+}
+.add-active .con-input-btns {
+    display: flex;
+}
+.con-star {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 30px;
+    font-size: 1.2rem;
+}
+.con-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 30px;
+    background: #f5f5f5;
+}
+.con-image img {
+    width: 250px;
+    z-index: 20;
+    transition: all .25s ease;
+}
+.con-image .bg {
+    position: absolute;
+    transform: translate(10px, 30px);
+    z-index: 10;
+    filter: blur(20px);
+    opacity: .4;
+}
+.con-text {
+    width: 100%;
+    padding: 10px 0px;
+    opacity: .5;
+    font-size: .8rem;
+}
+.con-text h3 {
+    padding: 5px 0px;
+}
+.con-price {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.1rem;
+    padding-top: 0px;
+}
+.add {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(130deg, #fdc527 0%, #fea01a 100%);
+    border: 0px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.con-input-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.con-input-btns input {
+    padding: 10px;
+    flex: 1;
+    width: calc(100% - 100px);
+    height: 49px;
+    border: 0px;
+    border-bottom: 2px solid grey;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: grey;
+    border-radius: 20px;
+}
+.con-input-btns button {
+    padding: 10px;
+    min-width: 49px;
+    height: 49px;
+    border: 0px;
+    border-radius: 20px;
+    background: linear-gradient(130deg, #fdc527 0%, #fea01a 100%);
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s ease;
+}
+.con-input-btns button:active {
+    transform: scale(.8);
 }
