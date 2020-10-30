@@ -206,6 +206,15 @@ color: #202842;
   height: 50px;
   
 }
+
+.blueButtonanker {
+  border: none;
+  border-radius: 50px;
+  margin-left: 6%;
+  margin-top: 30px;
+  width: 250px;
+  height: 50px;
+}
 #blueButton{
   background-color:#202842;
   color:white;
